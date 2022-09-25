@@ -1,0 +1,5 @@
+when you click on your account button
+    -> check if user is sign in if not redirect to me.create to make a new user
+    -> me.create has a link where you can login instead of signing up
+
+if user followe's himself then add id to his followers array

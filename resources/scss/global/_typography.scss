@@ -1,0 +1,28 @@
+:root {
+    --fs-lg: 4.825vw;
+    --fs-md: 3vmin;
+    --fs-sml: 2vmin;
+    --fs-x_sml: .905rem;
+
+    --fw-900: 900;
+    --fw-700: 700;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-400: 400;
+
+    --ff-main: 'Poppins', sans-serif;
+    --ff-acc: 'Nunito', sans-serif;
+}
+
+
+
+$fs-lg: var(--fs-lg);
+$fs-md: var(--fs-md);
+$fs-sml: var(--fs-sml);
+
+$fw-900: var(--fw-900);
+$fw-700: var(--fw-700);
+$fw-400: var(--fw-400);
+
+$ff-main: var(--ff-main);
+$ff-acc: var(--ff-acc);

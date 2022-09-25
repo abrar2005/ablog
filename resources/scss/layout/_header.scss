@@ -1,0 +1,113 @@
+.header {
+    display: flex;
+    gap: 2rem;
+    margin-top: 8rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 110%;
+        gap: 3rem;
+
+        h1 {
+            font-size: var(--fs-lg);
+            line-height: 1.4;
+            letter-spacing: 0.015em;
+            text-transform: capitalize;
+
+            strong {
+                color: var(--clr-pri);
+            }
+
+            span {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0.5rem;
+                    left: -0.5rem;
+                    right: -0.5rem;
+                    height: 4vmin;
+
+                    // Position the line behind the text so that
+                    // it is still easily readable
+                    z-index: -1;
+
+                    // The SVG is added as an SVG background image
+                    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg");
+                    background-repeat: no-repeat;
+
+                    // This allows the SVG to flex in size to fit
+                    // any length of word. If the word is short,
+                    // the SVG will be stretched vertically, if it
+                    // is long, the SVG will be stretched horizontally.
+                    // The jagged nature of this particular SVG works
+                    // with this transforming.
+                    background-size: cover;
+                }
+            }
+        }
+
+        p {
+            max-width: 25em;
+            color: var(--clr-drk);
+            font-size: var(--fs-sml);
+            opacity: 0.7;
+        }
+
+        button {
+            align-self: flex-start;
+            padding: 10px 78px;
+            font-size: var(--fs-sml);
+        }
+    }
+
+    &__foto {
+        width: 85rem
+    }
+}
+
+.scroll_icon {
+    position: absolute;
+    top: 90vh;
+    right: 50%;
+}
+
+.explore {
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-white);
+    border-radius: 30px;
+
+    width: 100%;
+    padding: 2rem;
+    padding-inline: 10rem;
+    margin-top: 2rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
+
+        h2 {
+            font-size: 2rem;
+            &::first-letter {
+                font-size: 3rem;
+            }
+        }
+        p {
+            font-size: var(--fs-sml);
+            color: var(--clr-drk);
+            opacity: .8;
+            width: 80%;
+        }
+        button {
+            align-self: flex-start;
+        }
+    }
+    &__foto {
+        width: 60rem;
+    }
+}

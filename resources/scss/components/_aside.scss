@@ -1,0 +1,39 @@
+.aside__menu {
+    align-self: flex-start;
+    height: 100%;
+    position: sticky;
+    top: 3rem;
+
+    &__nav {
+        width: 12em;
+
+        &__anchor {
+            text-decoration: none;
+            
+            li {
+                display: flex;
+                align-items: center;
+                padding: .6em 0;
+                margin: .3em 0;
+
+                .icon {
+                    transform: scale(.9);
+                    margin-right: .4em;
+                }
+                .name {
+                    font-weight: var(--fw-400);
+                    color: var(--clr-pri);
+                    font-size: .9rem;
+                }
+
+                &.active {
+                    background-color: rgba(#1ab4eb, 0.1);
+                    border-radius: 10px;
+                    padding-left: 1em;
+                    transform: translateX(-1rem);
+                }
+            }
+        }
+    }
+}
+
