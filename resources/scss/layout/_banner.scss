@@ -66,6 +66,13 @@
             font-size: var(--fs-md);
             margin-bottom: 2rem;
             font-weight: var(--fw-700);
+
+            &__job {
+                color: rgb(73, 73, 73);
+                font-weight: var(--fw-400);
+                font-size: var(--fs-x_sml);
+                margin-top: 1rem;
+            }
         }
         &__bio p{
             width: 80%;

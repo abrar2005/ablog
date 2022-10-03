@@ -13,7 +13,12 @@
                         Write, share and immortalize the things during your day-to-day life with the world’s bets-loved
                         digital journal
                     </p>
-                    <button>Sign in</button>
+                    @auth
+                    @else
+                        <a href={{ route('sign_up') }}>
+                            <button>Sign Up</button>
+                        </a>
+                    @endauth
                 </div>
                 <div class="header__foto">
                     <img src="img/header/mobile_user.svg" alt="">

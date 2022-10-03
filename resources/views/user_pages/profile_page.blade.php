@@ -1,11 +1,12 @@
 @extends('layouts.master')
-@section('title', 'Me')
+@section('title', $username)
 @section('content')
     <div class="container">
+        @include('layouts.components.login_session')
         <div class="profilePage">
             <section>
                 <div class="banner">
-                    <img class="banner__foto" src="img/banner/{{ $header_pic }}" alt="">
+                    <img class="banner__foto" src={{ 'img/banner/' . $header_pic }}>
 
                 </div>
                 <div class="trending">
@@ -28,6 +29,7 @@
                             <div class="info__box">
                                 <div class="info__box__name">
                                     <span>{{ $name }}</span>
+                                    <p class="info__box__name__job">{{ $personal_job }}</p>
                                 </div>
                                 <div class="info__box__stats">
                                 </div>
@@ -39,21 +41,30 @@
                                 <div class="info__box__stats">
                                     <div class="stat">
                                         <img src="img/icons/person_black.svg" alt="">
-                                        <p><span>{{ shortNumber(count($followers)) }}</span>followers</p>
+                                        <p>
+                                            {{-- <span>{{ shortNumber(count($followers)) }}</span> --}}
+                                            followers
+                                        </p>
                                     </div>
                                     <div class="stat">
                                         <img src="img/icons/diary_black.svg" alt="">
-                                        <p><span>{{ shortNumber(count($my_posts)) }}</span>posts</p>
+                                        <p>
+                                            {{-- <span>{{ shortNumber(count($my_posts)) }}</span> --}}
+                                            posts
+                                        </p>
                                     </div>
                                     <div class="stat">
                                         <img src="img/icons/like_black.svg" alt="">
-                                        <p><span>{{ shortNumber(count($my_posts)) }}</span>likes</p>
+                                        <p>
+                                            {{-- <span>{{ shortNumber(count($my_posts)) }}</span> --}}
+                                            likes
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <h2 style="margin-top: 4rem" >My posts</h2>
+                        <h2 style="margin-top: 4rem">My posts</h2>
                         @include('layouts.components.post', [
                             'name' => 'Mahmud Abdul',
                             'id' => '2342424',

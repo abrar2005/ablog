@@ -19,18 +19,19 @@ return new class extends Migration
             $table->string('gender'); 
             $table->string('username')->unique();
             $table->string('profile_pic');
+            $table->string('header_pic');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('location')->nullable();
             $table->longText('bio')->nullable();
-            $table->string('personal_job');
+            $table->string('personal_job')->nullable();
             $table->json('followers')->nullable();
             $table->json('saved')->nullable();
             $table->json('liked_content')->nullable();
             $table->json('followed_category')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
-            $table->timestamps();            
+            $table->timestamps();        
         });
     }
 

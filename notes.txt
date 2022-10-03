@@ -3,3 +3,19 @@ when you click on your account button
     -> me.create has a link where you can login instead of signing up
 
 if user followe's himself then add id to his followers array
+
+
+       //     'name' => self::dummyUser()['name'],
+        //     'username' => self::dummyUser()['username'],
+        //     'profile_pic' => self::dummyUser()['profile_pic'],
+        //     'header_pic' => self::dummyUser()['header_pic'],
+        //     'bio' => self::dummyUser()['bio'],
+
+        //     // The following array have the id of people id
+        //     'followers' => self::dummyUser()['followers'],
+
+        //     // The following array have the id of a post.
+        //     'my_posts' => self::dummyUser()['my_posts'],
+        //     'saved_content' => self::dummyUser()['saved_content'],
+        //     'liked_content' => self::dummyUser()['liked_content'],
+        //     'followed_category' => self::dummyUser()['followed_category'],

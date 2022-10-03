@@ -5,12 +5,17 @@
         <section>
             <header class="explore">
                 <div class="explore__content">
-                    <h2>Welcome,</h2>
+                    <h2>Welcome @auth {{ auth()->user()->name }} @endauth,</h2>
                     <p>
                         Write, share and immortalize the things during your day-to-day life with the world’s best-loved
                         digital journal
                     </p>
-                    <button>Sign in</button>
+                    @auth
+                    @else
+                        <a href={{ route('login') }}>
+                            <button>Login</button>
+                        </a>
+                    @endauth
                 </div>
                 <div class="explore__foto">
                     <img src="img/header/people_header.svg" alt="">
@@ -37,7 +42,7 @@
                     'master_icon' => 'sport.svg',
                     'card_pic' => '',
                 ])
-            
+
             </div>
         </section>
         <section>
@@ -48,14 +53,14 @@
                         'name' => 'Psychology',
                         'master_icon' => '',
                         'card_pic' => 'download.png',
-                        'content' => 'How to stop bieng manipulated and defend yourself'
+                        'content' => 'How to stop bieng manipulated and defend yourself',
                     ])
 
                     @include('layouts.components.explore_card', [
                         'name' => 'Psychology under the water',
                         'master_icon' => '',
                         'card_pic' => 'download.png',
-                        'content' => 'How to stop bieng manipulated and defend yourself'
+                        'content' => 'How to stop bieng manipulated and defend yourself',
                     ])
 
                     @include('layouts.components.explore_card', [
