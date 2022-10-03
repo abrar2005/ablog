@@ -1,4 +1,3 @@
-<img src="https://raw.githubusercontent.com/abrar2005/ablog/main/public/img/logo.png?token=GHSAT0AAAAAABZPEJ6GNYZM6KWIMQHLPFECYZ2PQEQ" alt="logo ablog" />
 
 ## About ablog
 
