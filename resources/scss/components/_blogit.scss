@@ -16,6 +16,11 @@
             padding: 1rem;        
             border-radius: 5px;
             border: 1.5px solid var(--clr-drk);
+
+            &:focus {
+                border:none ;
+                outline: 3px solid var(--clr-pri);
+            }
         }
     }
 }

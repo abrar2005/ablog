@@ -34,7 +34,7 @@ Route::post('/register_sign_up', [AuthController::class, 'register_sign_up'])->n
 
 
 // All post controller
-Route::get('/post/{post_id?}', [PostController::class, 'show_post']);
+Route::get('/post', [PostController::class, 'show_post'])->name('show_post');
 
 
 // chage the redirct of the ('/') in this route.

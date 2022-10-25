@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class AuthController extends Controller
 {
@@ -18,11 +19,13 @@ class AuthController extends Controller
 
     public function login()
     {
+        if(Auth::check()){return Redirect::to('/'. auth()->user()->username);}
         return view('auth.login');
     }
 
     public function sign_up()
     {
+        if(Auth::check()){return Redirect::to('/'. auth()->user()->username);}
         return view('auth.sign_up');
     }
 

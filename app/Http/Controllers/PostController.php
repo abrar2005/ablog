@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function show_post($post_id = null)  
+    public function show_post(Request $request)
     {
-        return view('');
+        $id = $request->query('blog_id');
+        
+        
+
+        return view('user_pages.post_page');
     }
 }

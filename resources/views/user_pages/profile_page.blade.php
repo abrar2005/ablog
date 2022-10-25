@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', $username)
+@section('title', '@'.$username)
 @section('content')
     <div class="container">
         @include('layouts.components.login_session')
