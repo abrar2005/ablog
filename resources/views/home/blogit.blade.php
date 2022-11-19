@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="trending">
-            @include('layouts.components.aside')
+            @include('layouts.components.menu.aside')
             <main>
                 <div class="blogit">
                     @include('layouts.components.login_session')

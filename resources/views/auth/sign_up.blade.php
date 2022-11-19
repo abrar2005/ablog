@@ -21,21 +21,25 @@
 
                     <div class="forms" id="form_1">
                         <div class="forms__form">
-                            <input type="email" placeholder="Email" class="css-input" />
+                            <input name="username" type="text" placeholder="Username" class="css-input" value="{{ old('username') }}" />
+                            <span class="alert"> @error('username') {{ $message }} @enderror </span>
+                        </div>
+
+                        <div class="forms__form">
+                            <input name="email" type="email" placeholder="Email" class="css-input" value="{{ old('email') }}" />
+                            <span class="alert"> @error('email') {{ $message }} @enderror </span>
                         </div>
                         <div class="forms__form">
-                            <input type="password" placeholder="Password" class="css-input" />
-                        </div>
-                        <div class="forms__form">
-                            <input type="password" placeholder=" Repeat Password" class="css-input" />
+                            <div class="password_input">
+                                <input id="password" type="password" name="password" placeholder="Password"  class="css-input" value="{{ old('password') }}" />
+                                <img class="eye_icon" src="img/icons/eye.png" alt="check_pass"> 
+                            </div>
+                            <span class="alert"> @error('password') {{ $message }} @enderror </span>
                         </div>
                         <div class="forms__btn">
-                            <button type="button" id="form_1">back</button>
-                            <button type="submit" id="form_1">submit</button>
+                            <button type="submit" class="green_btn">Sign Up</button>
                         </div>
                     </div>
-                   
-
                 </form>
             </div>
             <div class="sign_up__right">

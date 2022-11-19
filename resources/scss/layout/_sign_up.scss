@@ -34,6 +34,19 @@
             flex-direction: column;
             width: 36vw;
 
+            /* Change the white to any color */
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            input:-webkit-autofill:active {
+                -webkit-box-shadow: 0 0 0 30px rgb(0, 0, 0) inset !important;
+            }
+
+            /*Change text in autofill textbox*/
+            input:-webkit-autofill {
+                -webkit-text-fill-color: rgb(255, 255, 255) !important;
+            }
+
             &__form {
                 margin: 1rem 0;
 
@@ -69,12 +82,12 @@
                 margin-top: 2rem;
                 align-self: flex-end;
                 button {
-                    background: var(--clr-drk);
-                    margin-left: 1rem;
+                    // margin-left: 1rem;
                 }
             }
         }
     }
+
     &__right {
         width: 50vw;
         background-color: #f0f0f0;
@@ -87,39 +100,5 @@
             width: 50%;
             padding-bottom: 3rem;
         }
-    }
-}
-
-.success {
-    background: rgb(34, 194, 34);
-}
-.alert {
-    color: red;
-    font-size: 0.8rem;
-    font-weight: var(--fs-400);
-}
-
-.prompt {
-    width: fit-content;
-    padding: 1rem 4rem;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin: 2rem 0;
-    transform: translateX(-50%);
-
-    p {
-        color: var(--clr-drk);
-    }
-
-    &-success {
-        border: 2px solid rgb(100, 250, 81);
-        background-color: rgb(142, 245, 142);
-    }
-
-    &-fail {
-        border: 2px solid rgb(250, 42, 42);
-        background-color: rgb(243, 120, 120);
     }
 }

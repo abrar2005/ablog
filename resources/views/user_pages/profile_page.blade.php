@@ -7,14 +7,13 @@
             <section>
                 <div class="banner">
                     <img class="banner__foto" src={{ 'img/banner/' . $header_pic }}>
-
                 </div>
                 <div class="trending">
-                    @include('layouts.components.aside')
+                    @include('layouts.components.menu.aside')
                     <main>
                         <div class="banner__profile">
                             <div class="banner__profile__foto">
-                                <img src="img/people/{{ $profile_pic }}" alt="person">
+                                <img src="img/people/{{ $profile_pic? $profile_pic : 'user.png' }}" style="{{ $profile_pic? '' : 'padding: .35rem'}}" alt="person">
                             </div>
                             <div class="banner__profile__content">
                                 <div class="banner__profile__content__name">

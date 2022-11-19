@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="trending">
-            @include('layouts.components.aside')
+            @include('layouts.components.menu.aside')
             <main>
                 @php
                     $content =
@@ -18,7 +18,7 @@
                     'content' => substr($content, 0, 400) . '...',
                     'likes' => shortNumber('300500'),
                     'comments' => shortNumber('3443'),
-                    'followed' => 'false',
+                    'followed' => 'true',
                     'liked' => 'true',
                     'where_to' => route('show_post', ['blog_id' => 111]),
                     'date_published' => '11/3/2021',
